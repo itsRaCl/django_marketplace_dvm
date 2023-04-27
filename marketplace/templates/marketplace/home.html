@@ -1,0 +1,45 @@
+{%extends "marketplace/base.html"%}
+
+{% block content%}
+{% for item in items %}
+
+<!-- <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="media/{{item.item_image}}" alt="Card image cap" style="height: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{item.item_name}}</h5>
+        <p class="card-text">{{item.item_description}}.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: {{item.item_price}}</li>
+        <li class="list-group-item">Quantity: {{item.item_quantity}}</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="card-link">Buy</a>
+        <a href="#" class="card-link">Add to Cart</a>
+        <a href="#" class="card-link">Wishlist</a>
+    </div>
+</div> -->
+
+<div class="card mb-3">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img class="card-img" src="media/{{item.item_image}}" alt="Card image cap" style="height: 18rem;">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{item.item_name}}</h5>
+                <p class="card-text">{{item.item_description}}</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Price: {{item.item_price}}</li>
+                    <li class="list-group-item">Quantity: {{item.item_quantity}}</li>
+                </ul>
+                <div class="btn-group mt-2"><a href="#" class="btn btn-warning ">Buy</a>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                    <a href="#" class="btn btn-success">Wishlist</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{%endblock%}

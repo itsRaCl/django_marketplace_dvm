@@ -1,0 +1,20 @@
+{% extends 'marketplace/base.html' %}
+{%block content %}
+{% load crispy_forms_tags %}
+<div class="card pa-5">
+    <div class="card-body">
+        <div class="card-title text-center">
+            <h2>Customer Registration</h2>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            {{form | crispy}}
+            <br />
+            <input class="btn btn-success" type="submit" value="Submit" />
+            <br>
+            <small class="text-muted"">Register as a Vendor? <a href=" {%url 'users:vendor-register' %}">Click
+                Here!</a></small>
+        </form>
+    </div>
+</div>
+{% endblock %}

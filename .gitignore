@@ -1,0 +1,6 @@
+/dvm_task_sem2/secrets.py
+*/migrations/0*
+*__pycache__
+db.sqlite3
+media/*/*
+!*default.jpg
